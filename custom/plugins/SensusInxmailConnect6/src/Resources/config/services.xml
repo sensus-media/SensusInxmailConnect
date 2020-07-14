@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="Sensus\InxmailConnect6\ScheduledTask\Sync">
+            <tag name="shopware.scheduled.task" />
+        </service>
+
+
+        <service id="Sensus\InxmailConnect6\Service\Session">
+            <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
+        </service>
+
+        <service id="Sensus\InxmailConnect6\Util\Logger" class="Monolog\Logger">
+            <factory service="Shopware\Core\Framework\Log\LoggerFactory" method="createRotating"/>
+            <argument type="string">sensus_inxmailconnect</argument>
+        </service>
+
+        <service id="Sensus\InxmailConnect6\Service\Subscriber">
+            <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
+            <argument id="Sensus\InxmailConnect6\Util\Logger" type="service"/>
+            <argument id="Sensus\InxmailConnect6\Service\Session" type="service"/>
+            <argument id="newsletter_recipient.repository" type="service"/>
+        </service>
+
+        <service id="Sensus\InxmailConnect6\ScheduledTask\SyncTaskHandler">
+            <argument id="scheduled_task.repository" type="service"/>
+            <argument id="sales_channel.repository" type="service"/>
+            <argument id="Sensus\InxmailConnect6\Util\Logger" type="service"/>
+            <argument id="Sensus\InxmailConnect6\Service\Subscriber" type="service"/>
+            <argument id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextFactory" type="service"/>
+            <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
+            <tag name="messenger.message_handler"/>
+        </service>
+
+    </services>
+</container>

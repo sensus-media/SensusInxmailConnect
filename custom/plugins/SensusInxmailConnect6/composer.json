@@ -1,0 +1,43 @@
+{
+  "name": "sensus/inxmailconnect",
+  "description": "Inxmail Connect für Shopware 6",
+  "version": "v1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "SENSUS MEDIA // Ihr Shopware Partner",
+      "homepage": "https://www.sensus-media.de",
+      "role": "Manufacturer"
+    }
+  ],
+  "require": {
+    "shopware/core": "6.2.*"
+  },
+  "extra": {
+    "shopware-plugin-class": "Sensus\\InxmailConnect6\\SensusInxmailConnect6",
+    "plugin-icon": "src/Resources/config/plugin.png",
+    "label": {
+      "de-DE": "Inxmail Connect für Shopware 6",
+      "en-GB": "Inxmail Connect für Shopware 6"
+    },
+    "description": {
+      "de-DE": "",
+      "en-GB": ""
+    },
+    "manufacturerLink": {
+      "de-DE": "https://www.sensus-media.de/",
+      "en-GB": "https://www.sensus-media.de/en/"
+    },
+    "supportLink": {
+      "de-DE": "https://www.sensus-media.de/support/",
+      "en-GB": "https://www.sensus-media.de/en/support/"
+    },
+    "copyright": "&copy SENSUS MEDIA"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sensus\\InxmailConnect6\\": "src/"
+    }
+  }
+}

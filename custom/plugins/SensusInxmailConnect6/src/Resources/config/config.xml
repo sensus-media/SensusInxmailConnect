@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Base settings</title>
+        <title lang="de-DE">Basis Einstellungen</title>
+        <input-field type="text">
+            <name>server</name>
+            <label>Inxmail Server</label>
+        </input-field>
+        <input-field type="text">
+            <name>user</name>
+            <label>Inxmail API User</label>
+        </input-field>
+        <input-field type="text">
+            <name>password</name>
+            <label>Inxmail API Pass</label>
+        </input-field>
+        <input-field type="int">
+            <name>listID</name>
+            <label>Inxmail List ID</label>
+        </input-field>
+        <input-field type="bool">
+            <name>useDOI</name>
+            <label>Inxmail DOI aktivieren</label>
+        </input-field>
+
+    </card>
+</config>
