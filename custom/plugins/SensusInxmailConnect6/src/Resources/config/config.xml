@@ -21,10 +21,6 @@
             <name>listID</name>
             <label>Inxmail List ID</label>
         </input-field>
-        <input-field type="bool">
-            <name>useDOI</name>
-            <label>Inxmail DOI aktivieren</label>
-        </input-field>
 
     </card>
 </config>

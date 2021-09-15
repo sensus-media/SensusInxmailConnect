@@ -34,8 +34,7 @@ abstract class ConfigAwareService
             'server' => $this->systemConfigService->get('SensusInxmailConnect6.config.server', $salesChannel->getId()),
             'user' => $this->systemConfigService->get('SensusInxmailConnect6.config.user', $salesChannel->getId()),
             'pass' => $this->systemConfigService->get('SensusInxmailConnect6.config.password', $salesChannel->getId()),
-            'listID' => $this->systemConfigService->get('SensusInxmailConnect6.config.listID', $salesChannel->getId()),
-            'useDOI' => $this->systemConfigService->get('SensusInxmailConnect6.config.useDOI', $salesChannel->getId())
+            'listID' => $this->systemConfigService->get('SensusInxmailConnect6.config.listID', $salesChannel->getId())
         ];
     }
 

@@ -9,7 +9,6 @@
             <tag name="shopware.scheduled.task" />
         </service>
 
-
         <service id="Sensus\InxmailConnect6\Service\Session">
             <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
         </service>
@@ -35,6 +34,5 @@
             <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
             <tag name="messenger.message_handler"/>
         </service>
-
     </services>
 </container>

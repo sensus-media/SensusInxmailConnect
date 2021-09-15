@@ -9,7 +9,7 @@ use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
 use Shopware\Core\Framework\MessageQueue\ScheduledTask\ScheduledTaskHandler;
-use Shopware\Core\System\SalesChannel\Context\SalesChannelContextFactory;
+use Shopware\Core\System\SalesChannel\Context\AbstractSalesChannelContextFactory;
 use Shopware\Core\System\SalesChannel\SalesChannelEntity;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 
@@ -32,7 +32,7 @@ class SyncTaskHandler extends ScheduledTaskHandler
     private $logger;
 
     /**
-     * @var SalesChannelContextFactory
+     * @var AbstractSalesChannelContextFactory
      */
     private $salesChannelContextFactory;
 
@@ -43,7 +43,7 @@ class SyncTaskHandler extends ScheduledTaskHandler
 
 
     public function __construct(EntityRepositoryInterface $scheduledTaskRepository, EntityRepositoryInterface $salesChannelRepository,
-                                LoggerInterface $logger, Subscriber $subscriber, SalesChannelContextFactory $salesChannelContextFactory,
+                                LoggerInterface $logger, Subscriber $subscriber, AbstractSalesChannelContextFactory $salesChannelContextFactory,
                                 SystemConfigService $systemConfigService)
     {
         parent::__construct($scheduledTaskRepository);

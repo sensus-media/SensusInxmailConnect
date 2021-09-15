@@ -130,7 +130,7 @@ class Subscriber extends ConfigAwareService
             $result = $this->subscribeCustomer(
                 $context,
                 $subscriber->getEmail(),
-                (bool)$this->getConfig($context->getSalesChannel())['useDOI'],
+                false,
                 $list,
                 [
                     'firstName' => $subscriber->getFirstName(),

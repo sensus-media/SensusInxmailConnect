@@ -1,7 +1,7 @@
 {
   "name": "sensus/inxmailconnect",
   "description": "Inxmail Connect für Shopware 6",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "type": "shopware-platform-plugin",
   "license": "AGPL-3.0-or-later",
   "authors": [
